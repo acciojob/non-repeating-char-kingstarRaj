@@ -1,7 +1,7 @@
 function firstNonRepeatedChar(str) {
 	// creating a map/object to store a characters count 
 	let obj = {};
-	let bool = false;
+	let bool = null;
 	//iterating over str and adding count to obj
 	for( let char of str){
 		obj[char] = (obj[char] || 0) + 1 ; 
@@ -14,7 +14,7 @@ function firstNonRepeatedChar(str) {
 			return char;
 	}
 
-	if(bool == false){
+	if(bool === null){
 		return null;
 	}
 }
